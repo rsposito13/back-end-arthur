@@ -19,6 +19,7 @@ router.post("/login", async (req, res) => {
     res.status(error.status || 500).json({ message: error.message || "Erro!" });
   }
 });
+
 router.get("/auth", verificarAutenticacao, async (req, res) => {
   console.log("Rota GET /auth solicitada");
   try {
